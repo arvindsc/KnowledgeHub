@@ -76,6 +76,25 @@ git push heroku master			Triggers deploy
 
 Don't do above commands after pushing the code to remote
 
+***CLONING A REPOSITORY***
+	git clone https://github.com/codeschool/git-real.git	URL of the remote repository
+	git clone https://github.com/codeschool/git-real.git git-demo 	local folder name
+
+	Downloads the entire reppository into a new git-real directory
+	Adds the 'origin' remote, pointing in the clone URL.
+
+	git remote -v
+***BRANCHING OUT***	Need to work on a feature that will take some time? Time to branch out.
+	git branch cat
+	git branch   	Branch created from master; HEAD still on a master
+
+	git checkout cat	Switched to branch 'cat'
+
+
+
+
+	
+
 
 
 			
