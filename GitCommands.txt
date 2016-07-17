@@ -4,51 +4,62 @@ Time Capsule- store history of changes
 Central Repository
 Changes and commits
 Git is a Distributed Version Control System(DVCS)
-git config --global user.name "Arvind Singh Chauhan"
-git config --global user.email "arvindnitm@gmail.com"
-git congig --global color.ui true
----Repository
+***Config***
+	git config --global user.name "Arvind Singh Chauhan"
+	git config --global user.email "arvindnitm@gmail.com"
+	git congig --global color.ui true
+
+***Repository***
 	mkdir store
 	cd store
 	git init 
 	// Initialized empty Git repository in /Users/gregg/store/.git
 	// git metadata is stored here
-git status -> to check what's changed since last commit
-ADD FILE TO THE STAGING AREA:
-git add READMe.txt
-git rm  --cached README.txt
-git commit -m "Create a README."
-One timeline and we call it as master
-git log
-DIFFERENT WAYS TO ADD
-git add <list of files>		Add the list of files
-git add -all 			Add all files
-git add *.txt			Add all txt files in current directory
-git add docs/*.txt		Add all txt files in docs directory
-git add docs/			Add all files in docs directory
-git add "*.txt"			Add all txt files in the whole project
+	git status -> to check what's changed since last commit
+
+***ADD FILE TO THE STAGING AREA:***
+	git add READMe.txt
+	git rm  --cached README.txt
+	git commit -m "Create a README."
+	git log
+
+***DIFFERENT WAYS TO ADD***
+	git add <list of files>		Add the list of files
+	git add -all 			Add all files
+	git add *.txt			Add all txt files in current directory
+	git add docs/*.txt		Add all txt files in docs directory
+	git add docs/			Add all files in docs directory
+	git add "*.txt"			Add all txt files in the whole project
 
 ***GIT DIFF***
-git diff 			Show unstaged difference since last commit
-git add LICENSE			No differences, since all changes are stagedif we run add command then all 						changes will be staged or added to stage(staging area)
+	git diff 			Show unstaged difference since last commit
+	git add LICENSE			No differences, since all changes are stagedif we run add command then all 						        changes will be staged or added to stage(staging area)
 
-git diff --staged		View staged difference
+	git diff --staged		View staged difference
 
 ***UNSTAGING FILES***
-git reset HEAD^ <file>		HEAD refers to last commit on current branch or timeline we are on(master)
+	git reset HEAD^ <file>		HEAD refers to last commit on current branch or timeline we are on(master)
 
 ***DISCARD CHANGED/REVERT CHANGES***
-git checkout --<file name>	Blow away all changes since last commit
+	git checkout --<file name>	Blow away all changes since last commit
 
 ***SKIP STAGING AND COMMIT***
-git commit -a -m "Modify Readme"	Add changes from all tracked files, doesn't add new (untracked) files 
+	git commit -a -m "Modify Readme"Add changes from all tracked files, doesn't add new (untracked) files 
 
-***UNDOING A COMMIT"*** -Whoops, we forget something on that commit
-git reset --soft HEAD^		--soft:Reset into staging; HEAD^(caret) Move to commit before 'HEAD'
+***UNDOING A COMMIT"*** 		-Whoops, we forget something on that commit
+	git reset --soft HEAD^		--soft:Reset into staging; HEAD^(caret) Move to commit before 'HEAD'
+					undo last commit , put changes into staging
 
-***ADDING TO A COMMIT*** Maybe we forget to add a file
-git add todo.txt
-git commit --amend -m "Modify readme & add todo.txt"	--amend:Add to the last commit; Whatever had been staged is added  							to  last commit
+***ADDING TO A COMMIT*** 		Maybe we forget to add a file
+	git add todo.txt
+	git commit --amend -m "Modify readme & add todo.txt"	--amend:Add to the last commit; Whatever had been staged 								is added to  last commit; change the last commit
+	git reset --hard HEAD^		Undo last commit and all changes
+	git reset --hard HEAD^^		Undo last 2 commit and all changes
+***
+
+
+
+
 
  
 
