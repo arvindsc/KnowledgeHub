@@ -38,7 +38,7 @@ Git is a Distributed Version Control System(DVCS)
 	git diff --staged		View staged difference
 
 ***UNSTAGING FILES***
-	git reset HEAD^ <file>		HEAD refers to last commit on current branch or timeline we are on(master)
+	git reset HEAD^ <file>	        HEAD refers to last commit on current branch or timeline we are on(master)
 
 ***DISCARD CHANGED/REVERT CHANGES***
 	git checkout --<file name>	Blow away all changes since last commit
@@ -52,7 +52,7 @@ Git is a Distributed Version Control System(DVCS)
 
 ***ADDING TO A COMMIT*** 		Maybe we forget to add a file
 	git add todo.txt
-	git commit --amend -m "Modify readme & add todo.txt"	--amend:Add to the last commit; Whatever had been staged 								is added to  last commit; change the last commit
+	git commit --amend -m "Modify readme & add todo.txt"	--amend:Add to the last commit; Whatever had 					been staged is added to  last commit; change the last commit
 	git reset --hard HEAD^		Undo last commit and all changes
 	git reset --hard HEAD^^		Undo last 2 commit and all changes
 
@@ -64,13 +64,19 @@ Git is a Distributed Version Control System(DVCS)
 	Password caching-> https://help.github.com/articles/set-up-git
 
 ***WORKING WITH REMOTES***
-git remote add <name>   <address>		To add new remotes
-git remote rm  <name>				To remove remotes
-git push -u    <name>   <branch>		To push to remotes-usually master 
-git push					-u next time when you push, you not need to specify the name 
+git remote add <name>   <address>	To add new remotes
+git remote rm  <name>			To remove remotes
+git push -u    <name>   <branch>	To push to remotes-usually master 
+git push				-u next time when you push, you not need to specify the name 
 
 ***HEROKU REMOTE***
-heroku create					It also create a git repo ssh address
+heroku create				It also create a git repo ssh address
+git remote -v 				It create a repo
+git push heroku master			Triggers deploy
+
+Don't do above commands after pushing the code to remote
+
+
 
 			
 
